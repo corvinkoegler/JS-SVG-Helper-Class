@@ -1,4 +1,4 @@
-class SvgOps {
+module.exports = class SvgOps {
     /**
      * Moves SVG-cursor to stated coordinates without drawing anything.
      * @param {int} id 
@@ -98,7 +98,7 @@ class SvgOps {
      * @returns dataset with the content {id, operation, command}
      */
     static z(id) {
-        return { 'id': id, 'operation': 'z', 'command': `Z` };
+        return { 'id': id, 'operation': 'z', 'command': `z` };
     }
 
     /**
