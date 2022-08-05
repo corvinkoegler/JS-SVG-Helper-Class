@@ -104,7 +104,7 @@ module.exports = class SvgOps {
     /**
      * Draws a bezier-curve using a target coordinate and two helping anchors.
      * @param {int} id 
-     * @param {number} target_x 
+     * @param {number} target_x
      * @param {number} target_y 
      * @param {number} anchor_one_x 
      * @param {number} anchor_one_y 
@@ -141,7 +141,7 @@ module.exports = class SvgOps {
      * @returns dataset with the content {id, operation, target-x, target-y, anchor-x, anchor-y, command}
      */
     static S(id, target_x, target_y, anchor_x, anchor_y) {
-        return { 'id': id, 'operation': 'S', 'target_x': target_x, 'target_y': target_y, 'anchor_x': anchor_x, 'anchor_one_y': anchor_y, 'command': `S ${target_x} ${target_y} ${anchor_x} ${anchor_y} ` };
+        return { 'id': id, 'operation': 'S', 'target_x': target_x, 'target_y': target_y, 'anchor_x': anchor_x, 'anchor_y': anchor_y, 'command': `S ${target_x} ${target_y} ${anchor_x} ${anchor_y} ` };
     }
 
     /**
@@ -184,7 +184,7 @@ module.exports = class SvgOps {
     }
 
     /**
-     * Draws a quadratic-curve using a target coordinate. Used for chaining quadratic-curves.
+     * Draws a quadratic-curve using only a target coordinate. Used for chaining quadratic-curves.
      * @param {int} id 
      * @param {number} target_x 
      * @param {number} target_y 
